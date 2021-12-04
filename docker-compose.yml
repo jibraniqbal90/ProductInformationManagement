@@ -16,7 +16,7 @@ services:
       - pimnet
 
   app:
-    image: 'jibraniqbal/product-information-management:2.0.0'
+    image: 'jibraniqbal/product-information-management:3.0.0'
     build:
       context: .
     container_name: product-information-management
