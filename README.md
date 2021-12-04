@@ -11,7 +11,7 @@ $ git clone https://github.com/jibraniqbal90/ProductInformationManagement.git
 * Run the docker compose up from the root of the project ProductInformationManagement
 
 ```console
-$ docker compose up
+$ docker-compose up
 ```
 
 That's it. run the cURLS mentioned below or use postman (collection attached)
