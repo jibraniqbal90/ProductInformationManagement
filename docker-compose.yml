@@ -5,7 +5,6 @@ services:
     build:
       context: .
     container_name: product-synchronizer
-    hostname: product-synchronizer
     ports:
       - "8080:8080"
     volumes:
@@ -16,11 +15,10 @@ services:
       - pimnet
 
   app:
-    image: 'jibraniqbal/product-information-management:3.0.0'
+    image: 'jibraniqbal/product-information-management:1.0.0'
     build:
       context: .
     container_name: product-information-management
-    hostname: product-information-management
     ports:
       - "8081:8081"
     depends_on:
@@ -36,7 +34,7 @@ services:
 
 
   db:
-    image: 'jibraniqbal/postgres:2.0.0'
+    image: 'jibraniqbal/postgres:1.0.0'
     container_name: db
     environment:
       - POSTGRES_USER=docker

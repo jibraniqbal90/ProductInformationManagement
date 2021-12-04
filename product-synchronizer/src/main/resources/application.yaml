@@ -6,5 +6,5 @@
 # for development with docker
 pim:
   file-path: /app/csvfile
-  url: http://localhost:8081/products
+  url: http://product-information-management:8081/products
 

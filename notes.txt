@@ -36,5 +36,9 @@ docker run --name jibranpostgres -e POSTGRES_PASSWORD=postgresmaster -p 5432:543
 docker exec -it jibranpostgres bash
 psql --host=jibranpostgres --dbname=pim --username=root
 
+docker run -it  -name db jibraniqbal/postgres:3.0.0
+
+docker run -it --name db jibraniqbal/postgres:3.0.0
+
 docker run --name jibranpostgres2 -d -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres  -p 5432:5432  --restart=always postgres
 docker build -t jibraniqbal/postgres:1.0.2 .
