@@ -22,6 +22,8 @@ https://hub.docker.com/r/jibraniqbal/postgres
 
 https://hub.docker.com/r/jibraniqbal/product-information-management
 
+https://hub.docker.com/repository/docker/jibraniqbal/product-synchronizer
+
 ## Without docker compose : install docker and run below commands
 
 * This image uses following commands for configuration.
