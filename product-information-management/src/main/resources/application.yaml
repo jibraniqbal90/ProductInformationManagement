@@ -13,9 +13,9 @@ spring:
           batch_size: 2
     show-sql: true
   datasource:
-    url: jdbc:postgresql://db:5432/compose-postgres
-    username: compose-postgres
-    password: compose-postgres
+    url: jdbc:postgresql://db:5432/postgres
+    username: docker
+    password: docker
     hikari:
       idle-timeout: 180000
       maximum-pool-size: 4

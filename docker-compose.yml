@@ -1,10 +1,11 @@
-version: '2'
+version: "3.0"
 services:
   synchronizer:
     image: 'jibraniqbal/product-synchronizer:1.0.0'
     build:
       context: .
     container_name: product-synchronizer
+    hostname: product-synchronizer
     ports:
       - "8080:8080"
     volumes:
@@ -15,18 +16,19 @@ services:
       - pimnet
 
   app:
-    image: 'jibraniqbal/product-information-management:1.0.0'
+    image: 'jibraniqbal/product-information-management:2.0.0'
     build:
       context: .
     container_name: product-information-management
+    hostname: product-information-management
     ports:
       - "8081:8081"
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
-      - SPRING_DATASOURCE_USERNAME=compose-postgres
-      - SPRING_DATASOURCE_PASSWORD=compose-postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=docker
+      - SPRING_DATASOURCE_PASSWORD=docker
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     networks:
       - pimnet
@@ -34,11 +36,11 @@ services:
 
 
   db:
-    image: 'postgres:13.1-alpine'
+    image: 'jibraniqbal/postgres:2.0.0'
     container_name: db
     environment:
-      - POSTGRES_USER=compose-postgres
-      - POSTGRES_PASSWORD=compose-postgres
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
     networks:
       - pimnet
 

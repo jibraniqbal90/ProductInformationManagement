@@ -1,11 +1,12 @@
 Final product-information-management
 ------------------------------------
 gradle clean build
-cp build/libs/product-information-management.jar product-information-management.jar
+cp build/libs/product-information-management-0.0.1-SNAPSHOT.jar product-information-management-0.0.1-SNAPSHOT.jar
 mv product-information-management-0.0.1-SNAPSHOT.jar product-information-management.jar
 docker build -t jibraniqbal/product-information-management:1.0.0 .
 docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0
 docker image push jibraniqbal/product-information-management:1.0.0
+docker image push jibraniqbal/product-information-management:2.0.0
 
 Final product-synchronizer
 ------------------------------------
@@ -21,8 +22,19 @@ Final postgres
 docker build -t jibraniqbal/postgres:latest .
 docker run -it -p 5432:5432  jibraniqbal/postgres:latest
 docker image push jibraniqbal/postgres:latest
+docker image push ibraniqbal/postgres:2.0.0
 
 Docker Hub
 -------------
 https://hub.docker.com/r/jibraniqbal/postgres
 https://hub.docker.com/r/jibraniqbal/product-information-management
+
+
+Others
+-----
+docker run --name jibranpostgres -e POSTGRES_PASSWORD=postgresmaster -p 5432:5432 -d jibraniqbal/postgres:1.0.1
+docker exec -it jibranpostgres bash
+psql --host=jibranpostgres --dbname=pim --username=root
+
+docker run --name jibranpostgres2 -d -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres  -p 5432:5432  --restart=always postgres
+docker build -t jibraniqbal/postgres:1.0.2 .
