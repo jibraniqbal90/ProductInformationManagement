@@ -1,16 +1,47 @@
 # ProductInformationManagement
 ProductInformationManagement System
 
+# How to use?
+
+* Git clone
+```console
+$ git clone https://github.com/jibraniqbal90/ProductInformationManagement.git
+```
+
+* Run the docker compose up from the root of the project ProductInformationManagement
+
+```console
+$ docker compose up
+```
+
+That's it. run the cURLS mentioned below or use postman (collection attached)
+
+## Docker Hub
+
+https://hub.docker.com/r/jibraniqbal/postgres
+https://hub.docker.com/r/jibraniqbal/product-information-management
+
+## Without docker compose : install docker and run below commands
+
+* This image uses following commands for configuration.
+* Run DB first followed by Application.
+
+|docker commands     |Default value        |Description                                         |
+|------------------------|---------------------|----------------------------------------------------|
+|`Docker db run`    |no default           |$docker run -it -p 5432:5432  jibraniqbal/postgres:latest .|
+|`Docker app run`    |no default           |$docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0           |
+
 
 ## Environment for Development
  Those projects were developed with followings.
 
- * Java SDK 8 (1.8.0_112)
- * Spring-boot (2.3.0.RELEASE)
- * Apache Maven (3.6.2)
+ * Java SDK 11
+ * Spring-boot
+ * Gradle
+ * Docker
 
- ## Run the demo
- 
+ ## CURLS or postman
+
 
 POST
 ```
