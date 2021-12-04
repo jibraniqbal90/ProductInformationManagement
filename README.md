@@ -32,7 +32,8 @@ https://hub.docker.com/repository/docker/jibraniqbal/product-synchronizer
 |docker commands     |Default value        |Description                                         |
 |------------------------|---------------------|----------------------------------------------------|
 |`Docker db run`    |no default           |$docker run -it -p 5432:5432  jibraniqbal/postgres:latest .|
-|`Docker app run`    |no default           |$docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0           |
+|`Docker service run`    |no default           |$docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0           |
+|`Docker poller run`    |no default           |$docker run -it -p 8080:8080 jibraniqbal/product-synchronizer:1.0.0          |
 
 
 ## Environment for Development
