@@ -1,0 +1,25 @@
+server:
+  port : 8081
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        generate_statistics: true
+        order_inserts: true
+        jdbc:
+          batch_size: 2
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pim
+    username: alpha
+    password: alpha
+    hikari:
+      idle-timeout: 180000
+      maximum-pool-size: 4
+      minimumIdle: 2
+
+
+
