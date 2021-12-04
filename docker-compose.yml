@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   synchronizer:
-    image: 'jibraniqbal/product-synchronizer:1.0.0'
+    image: 'jibraniqbal/product-synchronizer:2.0.0'
     build:
       context: .
     container_name: product-synchronizer
@@ -15,7 +15,7 @@ services:
       - pimnet
 
   app:
-    image: 'jibraniqbal/product-information-management:1.0.0'
+    image: 'jibraniqbal/product-information-management:2.0.0'
     build:
       context: .
     container_name: product-information-management
@@ -34,7 +34,7 @@ services:
 
 
   db:
-    image: 'jibraniqbal/postgres:1.0.0'
+    image: 'jibraniqbal/postgres:2.0.0'
     container_name: db
     environment:
       - POSTGRES_USER=docker
