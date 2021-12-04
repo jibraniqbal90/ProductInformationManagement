@@ -1,0 +1,20 @@
+gradle clean build
+cp build/libs/product-information-management-0.0.1-SNAPSHOT.jar product-information-management-0.0.1-SNAPSHOT.jar
+
+docker build -t jibraniqbal/product-information-management:1.0.0 .
+docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0
+
+
+## product-information-management.jar
+
+
+Final
+-----
+gradle clean build
+cp build/libs/product-information-management.jar product-information-management.jar
+mv product-information-management-0.0.1-SNAPSHOT.jar product-information-management.jar
+
+docker build -t jibraniqbal/postgres:latest .
+
+docker image push jibraniqbal/product-information-management:1.0.0
+docker image push jibraniqbal/postgres:latest
