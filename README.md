@@ -91,3 +91,8 @@ curl --location --request PATCH 'http://localhost:8081/products' \
     "quantity": 4
 }'
 ```
+
+#Screenshots
+
+![alt text](https://raw.githubusercontent.com/jibraniqbal90/ProductInformationManagement/main/screenshots/1docker.png "preview1")
+![alt text](https://raw.githubusercontent.com/jibraniqbal90/ProductInformationManagement/main/screenshots/2postman.png "preview2")
