@@ -1,4 +1,10 @@
+# for local development without docker
+#pim:
+#  file-path: /Users/jibraniqbal/Documents/Hays/path
+#  url: http://localhost:8081/products
+
+# for development with docker
 pim:
-  file-path: /Users/jibraniqbal/Documents/Hays/path
-  url: http://localhost:8081/products
+  file-path: /app/csvfile
+  url: http://product-information-management:8081/products
 

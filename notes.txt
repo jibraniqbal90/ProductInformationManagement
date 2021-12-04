@@ -7,6 +7,14 @@ docker build -t jibraniqbal/product-information-management:1.0.0 .
 docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0
 docker image push jibraniqbal/product-information-management:1.0.0
 
+Final product-synchronizer
+------------------------------------
+gradle clean build
+cp build/libs/product-synchronizer-0.0.1-SNAPSHOT.jar product-synchronizer-0.0.1-SNAPSHOT.jar
+mv product-synchronizer-0.0.1-SNAPSHOT.jar product-synchronizer.jar
+docker build -t jibraniqbal/product-synchronizer:1.0.0 .
+docker run -it -p 8080:8080 jibraniqbal/product-synchronizer:1.0.0
+docker image push jibraniqbal/product-synchronizer:1.0.0
 
 Final postgres
 ------------------------------------

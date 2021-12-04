@@ -1,5 +1,19 @@
 version: '2'
 services:
+  synchronizer:
+    image: 'jibraniqbal/product-synchronizer:1.0.0'
+    build:
+      context: .
+    container_name: product-synchronizer
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./csvfile:/app/csvfile
+    depends_on:
+      - product-information-management
+    networks:
+      - pimnet
+
   app:
     image: 'jibraniqbal/product-information-management:1.0.0'
     build:
@@ -14,6 +28,10 @@ services:
       - SPRING_DATASOURCE_USERNAME=compose-postgres
       - SPRING_DATASOURCE_PASSWORD=compose-postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    networks:
+      - pimnet
+
+
 
   db:
     image: 'postgres:13.1-alpine'
@@ -21,3 +39,9 @@ services:
     environment:
       - POSTGRES_USER=compose-postgres
       - POSTGRES_PASSWORD=compose-postgres
+    networks:
+      - pimnet
+
+networks:
+  pimnet:
+    driver: bridge
