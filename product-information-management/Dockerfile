@@ -1,4 +1,4 @@
-FROM jibraniqbal/product-information-management
+FROM lpicanco/java11-alpine
 MAINTAINER Jibbu <jibran.iqbal90@gmail.com>
 EXPOSE 8081
 ENV PORT 8081
