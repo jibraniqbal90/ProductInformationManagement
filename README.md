@@ -8,8 +8,8 @@ curl --location --request POST 'http://localhost:8081/products' \
 --data-raw '[
      {
         
-        "title": "Awesome Jibran",
-        "description": "Takatak",
+        "title": "Test 1",
+        "description": "test1 desc",
         "price": 12.0,
         "quantity": 4
     }
@@ -27,7 +27,7 @@ curl --location --request GET 'http://localhost:8081/products/3' \
      {
         
         "title": "Java Fantastic, Very",
-        "description": "Takatak",
+        "description": "desc2",
         "price": 12.0,
         "quantity": 4
     }
@@ -43,7 +43,7 @@ curl --location --request PATCH 'http://localhost:8081/products' \
 --data-raw '{
     "sku": 3,
     "title": "Java Fantastic, Very much too much",
-    "description": "Takatak",
+    "description": "desc3",
     "price": 12.0,
     "quantity": 4
 }'
