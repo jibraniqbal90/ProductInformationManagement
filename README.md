@@ -19,6 +19,7 @@ That's it. run the cURLS mentioned below or use postman (collection attached)
 ## Docker Hub
 
 https://hub.docker.com/r/jibraniqbal/postgres
+
 https://hub.docker.com/r/jibraniqbal/product-information-management
 
 ## Without docker compose : install docker and run below commands
