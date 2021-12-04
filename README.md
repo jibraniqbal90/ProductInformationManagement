@@ -22,6 +22,8 @@ https://hub.docker.com/r/jibraniqbal/postgres
 
 https://hub.docker.com/r/jibraniqbal/product-information-management
 
+https://hub.docker.com/repository/docker/jibraniqbal/product-synchronizer
+
 ## Without docker compose : install docker and run below commands
 
 * This image uses following commands for configuration.
@@ -30,7 +32,8 @@ https://hub.docker.com/r/jibraniqbal/product-information-management
 |docker commands     |Default value        |Description                                         |
 |------------------------|---------------------|----------------------------------------------------|
 |`Docker db run`    |no default           |$docker run -it -p 5432:5432  jibraniqbal/postgres:latest .|
-|`Docker app run`    |no default           |$docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0           |
+|`Docker service run`    |no default           |$docker run -it -p 8081:8081 jibraniqbal/product-information-management:1.0.0           |
+|`Docker poller run`    |no default           |$docker run -it -p 8080:8080 jibraniqbal/product-synchronizer:1.0.0          |
 
 
 ## Environment for Development
@@ -91,3 +94,8 @@ curl --location --request PATCH 'http://localhost:8081/products' \
     "quantity": 4
 }'
 ```
+
+#Screenshots
+
+![alt text](https://raw.githubusercontent.com/jibraniqbal90/ProductInformationManagement/main/screenshots/1docker.png "preview1")
+![alt text](https://raw.githubusercontent.com/jibraniqbal90/ProductInformationManagement/main/screenshots/2postman.png "preview2")
